@@ -90,20 +90,20 @@
           <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
         </div>
       </div>
-      <div class="acoes">
-        <button
-          class="botao"
-          (click)="criarPensamento()"
-          >
-            Salvar
-        </button>
-        <button
-          class="botao"
-          (click)="cacelarPensamento()"
-          >
-            Cancelar
-        </button>
-      </div>
+    </div>
+    <div class="acoes">
+      <button
+        class="botao"
+        (click)="criarPensamento()"
+        >
+          Salvar
+      </button>
+      <button
+        class="botao"
+        routerLink="/listarPensamento"
+        >
+          Cancelar
+      </button>
     </div>
   </form>
 </section>

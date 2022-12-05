@@ -22,9 +22,4 @@ export class CriarPensamentoComponent implements OnInit {
   criarPensamento() {
     alert('Novo Pensamento Criado!');
   }
-
-  cacelarPensamento() {
-    alert('Cancelar Pensamento')
-  }
-
 }
