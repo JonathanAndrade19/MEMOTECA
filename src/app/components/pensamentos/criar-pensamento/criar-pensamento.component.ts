@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Pensamento } from 'src/app/core/pensamento';
 import { PensamentoService } from 'src/app/service/pensamento.service';
