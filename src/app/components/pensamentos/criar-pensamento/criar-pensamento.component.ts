@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Pensamento } from 'src/app/core/pensamento';
 import { PensamentoService } from 'src/app/service/pensamento.service';
 
 @Component({
@@ -17,16 +16,35 @@ export class CriarPensamentoComponent implements OnInit {
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      conteudo: ['Pensamento ...'],
-      autoria: ['o nome do autor'],
+      conteudo: [
+        '', 
+        Validators.compose(
+          [
+            Validators.required, 
+            Validators.pattern(/(.|\s)*\S(.|\s)*/)
+          ]
+        )
+      ],
+      autoria: [
+        '', 
+        Validators.compose(
+          [
+            Validators.required, 
+            Validators.minLength(3)
+          ]          
+        )
+      ],
       modelo: ['modelo1']
     })
   }
 
   criarPensamento() {
-    this.service.cadastrarPensamento(this.formulario.value).subscribe(() => {
-      this.router.navigate(['/listarPensamento']);
-    })
+    console.log(this.formulario.status)
+    if(this.formulario.valid){
+      this.service.cadastrarPensamento(this.formulario.value).subscribe(() => {
+        this.router.navigate(['/listarPensamento']);
+      })
+    }
   }
 
   cancelar() {
