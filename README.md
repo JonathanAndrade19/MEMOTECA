@@ -1,27 +1,20 @@
-# MemotecaSpa
+# Criando uma Aplicação de Pensamentos.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+### Tecnologias usadas. 
+* Angular 14
+* Css3
+* Html5
+* Json-Server 0.17.1 - fake REST API 
+https://www.npmjs.com/package/json-server
 
-## Development server
+#### Mural de Pensamentos
+![Tela do Mural de Pensamentos](https://github.com/JonathanAndrade19/MemoTeca/blob/main/src/assets/imagens/img-da-aplicacao/Mural-de-pensamentos.png)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Tela de Adicionar os Pensamentos
+![Tela de Adicionar os Pensamentos](https://github.com/JonathanAndrade19/MemoTeca/blob/main/src/assets/imagens/img-da-aplicacao/Adicionar-um-pensamento.png)
 
-## Code scaffolding
+#### Tela de editar o Pensamento
+![Tela de editar o Pensamento](https://github.com/JonathanAndrade19/MemoTeca/blob/main/src/assets/imagens/img-da-aplicacao/editar-pensamento.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Tela de deletar o Pensamento
+![Tela de deletar o Pensamento](https://github.com/JonathanAndrade19/MemoTeca/blob/main/src/assets/imagens/img-da-aplicacao/tela-deletar-pensamento.png)
