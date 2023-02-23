@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Pensamento } from 'src/app/core/pensamento';
 import { PensamentoService } from 'src/app/service/pensamento.service';
 
 @Component({
@@ -10,30 +10,47 @@ import { PensamentoService } from 'src/app/service/pensamento.service';
 })
 export class EditarPensamentoComponent implements OnInit {
 
-  pensamento: Pensamento = {
-    id: 0,
-    conteudo: '',
-    autoria: '',
-    modelo: ''
-  }
+  formulario!: FormGroup;
 
-  constructor(private service: PensamentoService, private router: Router, private route: ActivatedRoute) { }
+  constructor(
+    private service: PensamentoService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
+  ) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id')
-    this.service.buscarPorId(parseInt(id!)).subscribe((dados) => {
-      this.pensamento = dados
+    this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
+      this.formulario = this.formBuilder.group({
+        id: [pensamento.id],
+        conteudo: [pensamento.conteudo, Validators.compose([
+          Validators.required,
+          Validators.pattern(/(.|\s)*\S(.|\s)*/)
+        ])],
+        autoria: [pensamento.autoria, Validators.compose([
+          Validators.required,
+          Validators.minLength(3)
+        ])],
+        modelo: [pensamento.modelo]
+      })
     })
   }
 
-  editarPensamento(){
-    this.service.editarPensamento(this.pensamento).subscribe(() => {
+  editarPensamento() {
+    this.service.editarPensamento(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
     })
   }
 
-  cancelar(){
+  cancelar() {
     this.router.navigate(['/listarPensamento'])
   }
 
+  habilitarBotao(): string {
+    if(this.formulario.valid) {
+      return "botao"
+    }
+    else return "botao__desabilitado"
+  }
 }
