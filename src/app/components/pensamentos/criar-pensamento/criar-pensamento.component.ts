@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { minusculoValidator } from 'src/app/core/minusculoValidator';
 import { PensamentoService } from 'src/app/service/pensamento.service';
 
 @Component({
@@ -12,7 +13,11 @@ export class CriarPensamentoComponent implements OnInit {
 
   formulario!: FormGroup;
 
-  constructor(private service: PensamentoService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(
+    private service: PensamentoService, 
+    private router: Router, 
+    private formBuilder: FormBuilder
+  ){ }
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
@@ -30,7 +35,8 @@ export class CriarPensamentoComponent implements OnInit {
         Validators.compose(
           [
             Validators.required, 
-            Validators.minLength(3)
+            Validators.minLength(3),
+            minusculoValidator
           ]          
         )
       ],
