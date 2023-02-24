@@ -40,7 +40,8 @@ export class CriarPensamentoComponent implements OnInit {
           ]          
         )
       ],
-      modelo: ['modelo1']
+      modelo: ['modelo1'],
+      favorito: [false]
     })
   }
 

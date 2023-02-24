@@ -4,84 +4,98 @@
       "conteudo": "hoje é dia de cinema",
       "autoria": "jonathan barbosa",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 2
     },
     {
       "conteudo": "Dia de Estudos, Angular e Java com Spring boot 3",
       "autoria": "Jonathan Andrade",
       "modelo": "modelo1",
+      "favorito": true,
       "id": 3
     },
     {
       "conteudo": "Obrigado senhor por mais um dia !",
       "autoria": "Jonathan Moreira",
       "modelo": "modelo3",
+      "favorito": true,
       "id": 4
     },
     {
       "conteudo": "testando paginação",
       "autoria": "teste 02",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 5
     },
     {
       "conteudo": "testando campo de pensamento novo pensamento",
       "autoria": "teste 04",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 6
     },
     {
       "conteudo": "olá como vai as coisas ",
       "autoria": "eu mesmo",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 7
     },
     {
       "conteudo": "agora sim vamos ver se deu certo",
       "autoria": "será",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 8
     },
     {
       "conteudo": "mais um bug por aqui",
       "autoria": "o bug",
       "modelo": "modelo2",
+      "favorito": false,
       "id": 9
     },
     {
       "id": 10,
       "conteudo": "será que da certo ?",
       "autoria": "eu mesmo",
-      "modelo": "modelo2"
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "conteudo": "mais um pensamento para teste",
       "autoria": "o pensamento",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 11
     },
     {
       "conteudo": "vamos vencer",
       "autoria": "flamengo",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 12
     },
     {
       "conteudo": "curso de angular 2+ ",
       "autoria": "alura",
       "modelo": "modelo3",
+      "favorito": false,
       "id": 13
     },
     {
-      "conteudo": "estudando java",
+      "id": 14,
+      "conteudo": "estudando java com spring boot 3",
       "autoria": "alura",
-      "modelo": "modelo3",
-      "id": 14
+      "modelo": "modelo2",
+      "favorito": false
     },
     {
       "conteudo": "dia 23 de fevereiro, pensamento para testar um campo com mais informações do que o normal ",
       "autoria": "pensamento",
       "modelo": "modelo1",
+      "favorito": false,
       "id": 15
     }
   ]
